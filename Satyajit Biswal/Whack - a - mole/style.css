@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+   font-family: "Baloo Bhai", sans-serif;
+}
+
+body{
+  background-color: #fef9ef;
+}
+.nav-bar {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30px;
+  background-color: deeppink;
+  color: white;
+  padding-left: 20px;
+  padding-right: 50px;
+}
+.highscore{
+  font-size: 20px;
+}
+.contain{
+  display: grid;
+  grid-template-columns: 30vw 50vw 20vw;
+  grid-template-rows: 90vh;
+}
+.level-instruction{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.level{
+  font-size: 25px;
+}
+.mode{
+   padding-top: 20px;
+   color: rgb(255, 0, 195);
+   font-weight: 600;
+   padding-bottom: 10px;
+}
+.level-mode{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.level-mode li{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  height:60px;
+}
+.level-btn{
+  padding: 15px 40px;
+  border-radius: 2000px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease,box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+}
+.level-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0.25);
+}
+.level-mode .easy{
+  background:#00ff2f;
+  color: #ffffff;
+}
+.level-mode .medium{
+  background:#f59e0b;
+  color: #ffffff;
+}
+.level-mode .hard{
+  background:#ef4444;
+  color: #ffffff;
+}
+.instruction{
+  margin:  40px 30px;
+  font-size: 20px;
+  text-align: justify;
+  border: 5px solid black;
+  outline: 5px solid rgb(164, 164, 164);
+  border-radius: 30px;
+  padding: 10px 20px 20px 20px;
+  background-color: #0080ffdf;
+  color: white;
+   font-style:italic;
+}
+.heading{
+  font-size: 25px;
+  font-weight: 600;
+  color:rgb(0, 255, 229) ;
+  padding-bottom: 10px;
+}
+
+.maingame{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:10px ;
+}
+.game{
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(3,10vw);
+  grid-template-rows: repeat(3,10vw);
+  gap: 10px;
+}
+.box{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #44ef75;
+  border: none;
+  border-radius: 20px;
+}
+.reset-btn{
+  color: #1e3a8a;
+  background-color: #a3e469;
+  
+}
+
+input[type="radio"] {
+     opacity: 0;
+     position: fixed;
+     width: 0;
+  }
+
+ input[type="radio"]:checked + .easy{
+ background-color: #bbf7d0;
+ color: #065f46;
+}
+input[type="radio"]:checked + .medium{
+ background-color: #fde68a;
+ color: #92400e;
+}
+input[type="radio"]:checked + .hard{
+  background-color: #fecaca;
+  color: #991b1b;
+}
+.mole{
+  height: 110px;
+}
+.cactus{
+  height: 110px;
+}
+.gameover{
+  color: deeppink;
+  font-size: 20px;
+  padding: 20px;
+
+}
+
+.scorecard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.score{
+  color: black;
+  background-color: aqua;
+  padding: 20px 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: max-content;
+  margin: 30px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.gameover{
+  font-weight: 600;
+  color: rgb(39, 108, 238);
+}

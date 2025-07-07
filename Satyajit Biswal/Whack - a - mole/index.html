@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-a-mole</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div>Welcome to my Game</div>
+        <div class="highscore">Highscore:</div>
+    </nav>
+    <div class="contain">
+        <div class="level-instruction">
+            <div class="level">
+                <div class="mode">Choose your mode</div>
+                <ul class="level-mode">
+                    <li >    
+                        <input type="radio" id="easy" name="levels" value="easy" onchange="onModeChange(event)" checked>
+                        <label for="easy" class="level-btn easy">Easy</label>
+                    </li>
+                   <li > 
+                        <input type="radio" id="medium" name="levels" value="medium"   onchange="onModeChange(event)" >
+                        <label for="medium"  class="level-btn medium">Medium</label>
+                    </li>
+                    <li > 
+                        <input type="radio" id="hard" name="levels" value="hard"   onchange="onModeChange(event)" >
+                         <label for="hard" class="level-btn hard">Hard</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="instruction">
+                <div class="heading">Instruction:</div>
+                <div>
+                 Welcom to Whack-a-mole game.You can earn 10 points by clicking on mole but if you accidentally click on the mole the game will be over immediately. Before that choose your difficulty level (by default Easy).Nothing to write much.I am writing it to fill the space 😝 .Good Luck Bro or Bro's Sis😊.Show the world that You are not a looser.
+                </div>
+            </div>
+        </div>
+        <div class="maingame">
+           <h1>🐹 Whack-a-Mole 🛠️</h1>
+            <div class="game">
+                <div id="1" class="box"></div>
+                <div id="2" class="box"></div>
+                <div id="3" class="box"></div>
+                <div id="4" class="box"></div>
+                <div id="5" class="box"></div>
+                <div id="6" class="box"></div>
+                <div id="7" class="box"></div>
+                <div id="8" class="box"></div>
+                <div id="9" class="box"></div>
+            </div>
+        </div>
+        <div class="scorecard">
+            <div class="score">Your Score:0</div>
+            <button class="reset-btn level-btn">Reset</button>
+              <div class="gameover"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
