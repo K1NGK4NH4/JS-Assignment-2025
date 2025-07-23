@@ -25,7 +25,7 @@ body{
 }
 .contain{
   display: grid;
-  grid-template-columns: 30vw 50vw 20vw;
+  grid-template-columns: 35vw 45vw 20vw;
   grid-template-rows: 90vh;
 }
 .level-instruction{
@@ -45,17 +45,17 @@ body{
 .level-mode{
   list-style: none;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 10px;
 }
 .level-mode li{
   display: flex;
   /* justify-content: center; */
   align-items: center;
-  height:60px;
+  height:50px;
 }
 .level-btn{
-  padding: 15px 40px;
+  padding: 10px 30px;
   border-radius: 2000px;
   cursor: pointer;
   border: none;
@@ -125,7 +125,6 @@ body{
 .reset-btn{
   color: #1e3a8a;
   background-color: #a3e469;
-  
 }
 
 input[type="radio"] {
@@ -179,4 +178,69 @@ input[type="radio"]:checked + .hard{
 .gameover{
   font-weight: 600;
   color: rgb(39, 108, 238);
+}
+
+.weapon-box{
+  align-self: baseline;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.weapons-list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.weapon-option{
+  display: flex;
+  gap: 10px;
+}
+.weapon-option .weapon-name{
+  border: 3px solid rgb(20, 255, 118);
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition:box-shadow 0.2s ease,transform 0.2s ease;
+}
+.weapon-name img{
+  object-fit: cover;
+  object-position: center center;
+  height: 100%;
+  width:100%;
+  border-radius: 50px;
+}
+
+.weapons-option label:hover{
+ box-shadow: 0px 0px 16px  red;
+ transform: translateY(-2px);
+}
+input[type='radio']:checked + .weapon-name {
+  border: 4px solid rgba(255, 20, 20, 0.953);
+}
+
+.weapon-desc{
+  padding: 5px 10px;
+  background-color: rgb(52, 177, 255);
+  color: white;
+  border-radius: 20px ;
+  font-size: 12px;
+}
+
+.animals{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.animal{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
+}
+.animal span{
+  background-color: red;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 10px;
 }

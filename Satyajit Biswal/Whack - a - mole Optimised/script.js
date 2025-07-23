@@ -1,10 +1,17 @@
-let gameoverAudio=new Audio("gameover.mp3");
-let music = new Audio("music.mp3")
-
+// let gameoverAudio=new Audio("gameover.mp3");
+// let music = new Audio("music.mp3")
 
 let mole= document.createElement("img");
 mole.src="./mole.png";
 mole.className="mole";
+
+let jerry= document.createElement("img");
+jerry.src="./Jerry.png";
+jerry.className="mole";
+
+let snake= document.createElement("img");
+snake.src="./snake.png";
+snake.className="mole";
 
 let cactus=document.createElement("img");
 cactus.src="./cactus.png";
@@ -16,11 +23,11 @@ let score=0;
 scorecard.innerHTML=`Your Score: ${score}`;
 let isgameover=false;
 
-function updateScore(){
-    score =score+10;
-    console.log("Mole clicked");
-    scorecard.innerHTML=`Your Score: ${score}`;
-}
+// function updateScore(){
+//     score =score+10;
+//     console.log("Mole clicked");
+//     scorecard.innerHTML=`Your Score: ${score}`;
+// }
 
 
 function randommole(){
@@ -33,13 +40,22 @@ function randomcactus(){
     return randomIdl.toString()
 }
 
+function randomjerry(){
+    let randomIdj=Math.floor((Math.random()*9)+1);
+    return randomIdj.toString()
+}
+
+function randomsnake(){
+    let randomIds=Math.floor((Math.random()*9)+1);
+    return randomIds.toString()
+}
 
 //Main game 
 function game(){
     if(isgameover) {
         return;
     }
-    music.play();
+    // music.play();
      if (mole.parentNode)   mole.parentNode.removeChild(mole);
      if (cactus.parentNode) cactus.parentNode.removeChild(cactus);
     
@@ -76,14 +92,15 @@ function game(){
 //Game over Option
 let gameInterval = setInterval(game, 2000);
 
+
 function gameover(){
      isgameover = true;
     clearInterval(gameInterval);
     document.querySelector(".gameover").innerText =
     "Game Over!!! Start on clicking Reset button";
-  music.pause();
-  gameoverAudio.play();
 }
+
+
 
 
 //Level change option
@@ -145,5 +162,10 @@ resetbtn.addEventListener('click',()=>{
   if (checked) onModeChange({ target: checked });
 })
 
-//work to left
-//set highscore separately for each level and when I change the mod the scorecard should be 0 and if(score>highscore) change high score
+
+
+let weapons=document.querySelectorAll("input[type='radio']")
+function onWeaponChange(event){
+    console.log(event.target.value)
+}
+

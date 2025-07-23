@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-a-mole</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div>Welcome to my Game</div>
+        <div class="highscore">Highscore:</div>
+    </nav>
+    <div class="contain">
+        <div class="level-instruction">
+            <div class="level">
+                <div class="mode">Choose Your Mode</div>
+                <ul class="level-mode">
+                    <li>
+                        <input type="radio" id="easy" name="levels" value="easy" onchange="onModeChange(event)" checked>
+                        <label for="easy" class="level-btn easy">Easy</label>
+                        <!-- <img src="mole.png" alt="mole" height="80px"> -->
+                    </li>
+                    <li>
+                        <input type="radio" id="medium" name="levels" value="medium" onchange="onModeChange(event)">
+                        <label for="medium" class="level-btn medium">Medium</label>
+                        <!-- <img src="Jerry.png" alt="jerry" height="80px"> -->
+                    </li>
+                    <li>
+                        <input type="radio" id="hard" name="levels" value="hard" onchange="onModeChange(event)">
+                        <label for="hard" class="level-btn hard">Hard</label>
+                        <!-- <img src="snake.png" alt="snake" height="80px"> -->
+                    </li>
+                </ul>
+            </div>
+            <div class="weapon-box">
+                <div class="heading">Weapons:</div>
+                <div class="weapons-list">
+                    <div class="weapon-option">
+                        <input type="radio" name="weapon" value="hammer" id="hammer" 
+                            checked>
+                        <label for="hammer" class="weapon-name"><img src="Hammer.jpeg" alt="Hammer"></label>
+                        <span class="weapon-desc">
+                            <h3>🔨 Hammer</h3>
+                            <p>Damage: 1<br>Reload: 300ms<br>Special: Basic whack tool</p>
+                        </span>
+                    </div>
+                    <div class="weapon-option">
+                        <input type="radio" name="weapon" value="spikebat" id="spikebat"
+                            >
+                        <label for="spikebat" class="weapon-name"><img src="Bat.jpeg" alt="spikebat"></label>
+                        <span class="weapon-desc">
+                            <h3>🪓 Spiked Bat</h3>
+                            <p>Damage: 2<br>Reload: 2s<br>Special: Extra damage with slight cooldown</p>
+                    </div>
+                    <div class="weapon-option">
+                        <input type="radio" name="weapon" value="electricstick" id="electricstick"
+                            >
+                        <label for="electricstick" class="weapon-name"><img src="ElectricStick.jpeg"
+                                alt="electricstick"></label>
+                        <span class="weapon-desc">
+                            <h3>⚡ Electric Stick</h3>
+                            <p>Damage: 1<br>Reload: 3s<br>Special: Stuns nearby animals for 1 second</p>
+                        </span>
+                    </div>
+                    <div class="weapon-option">
+                        <input type="radio" name="weapon" value="laser" id="laser" >
+                        <label for="laser" class="weapon-name"><img src="Laser.jpeg" alt="laser"></label>
+                        <span class="weapon-desc">
+                            <h3>🔫 Laser Gun</h3>
+                            <p>Damage: Instant Kill<br>Reload: 5s<br>Special: Pierces through multiple animals</p>
+                        </span>
+                    </div>
+                    <div class="weapon-option">
+                        <input type="radio" name="weapon" value="bomb" id="bomb" >
+                        <label for="bomb" class="weapon-name"><img src="Bomb.jpeg" alt="bomb"></label>
+                        <span class="weapon-desc">
+                            <h3>💣 Bomb</h3>
+                            <p>Damage: 3 (Area Effect)<br>Reload: 5s<br>Special: Kills all animals in blast radius
+                            </p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="maingame">
+            <h1>🐹 Whack-a-Mole 🛠️</h1>
+            <div class="game">
+                <div id="1" class="box"></div>
+                <div id="2" class="box"></div>
+                <div id="3" class="box"></div>
+                <div id="4" class="box"></div>
+                <div id="5" class="box"></div>
+                <div id="6" class="box"></div>
+                <div id="7" class="box"></div>
+                <div id="8" class="box"></div>
+                <div id="9" class="box"></div>
+            </div>
+        </div>
+        <div class="scorecard">
+            <div class="score">Your Score:0</div>
+            <button class="reset-btn level-btn">Reset</button>
+            <div class="gameover"></div>
+            <div class="animals">
+                <div class="animal">
+                    <img src="mole.png" alt="mole" height="50px">
+                    <span>HP:1</span>
+                </div>
+                <div class="animal">
+                    <img src="Jerry.png" alt="jerry" height="50px">
+                    <span>HP:2</span>
+                </div>
+                <div class="animal">
+                    <img src="snake.png" alt="snake" height="50px">
+                    <span>HP:3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
